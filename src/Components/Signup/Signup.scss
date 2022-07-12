@@ -1,0 +1,86 @@
+.signUpContainer{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .signUpModal{
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .nameInputs{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            input{
+                width: calc(50% - 10px);
+                height: 40px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 0 10px;
+                margin-bottom: 10px;
+                margin-left: 5px;
+                margin-right: 5px;
+                &:focus{
+                    outline: none;
+                }
+                font-size:0.9em;
+            }
+        }
+        input{
+            font-size:0.9em;
+            width: calc(100% - 31px);
+            height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 0 10px;
+            margin-bottom: 10px;
+            &:focus{
+                outline: none;
+            }
+        }
+        .dateInputs{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            select{
+                width:calc((100% / 3) - 10px);
+                height: 40px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+                padding: 0 10px;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        button{
+            width:50%;
+            height: 40px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #00a400;
+            color:white;
+            font-size: 1.1em;
+            font-weight:600;
+            &:hover{
+                background-color: #699B5C;
+                color:white;
+            }
+        }
+    }
+}
