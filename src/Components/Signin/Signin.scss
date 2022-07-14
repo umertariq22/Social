@@ -1,0 +1,82 @@
+.SigninContainer{
+    width: 100vw;
+    height: 100vh;
+    background: #F0F2F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Signin{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 400px;
+        height: 350px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        input, button{
+            height: 45px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            font-size: 1em;
+        }
+        input{
+            width: calc(100% - 41px);
+            &:focus{
+                outline: none;
+                border: 1px solid #00A8FF;
+            }
+        }
+        #signinButton{
+            width: calc(100% - 31px);
+            background: #1877f2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size:1.2em;
+            margin-top: 10px;
+            cursor: pointer;
+            &:hover{
+                background: #166FE5;
+            }
+        }
+        #emailLogin{
+            margin-top: 20px;
+        }
+        #signupButton{
+            width:50%;
+            background: #42b72a;
+            color:white;
+            font-size: 1.1em;
+            font-weight:600;
+            height:50px;
+            margin-bottom: 20px;
+            &:hover{
+                background: #36a420;
+            }
+        }
+        p{
+            margin: 0;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            color:#1877f2;
+            font-size: 1em;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        hr{
+            width: calc(100% - 41px);
+            margin: 0;
+            margin-bottom: 20px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+    }
+
+}

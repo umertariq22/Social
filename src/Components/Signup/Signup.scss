@@ -1,22 +1,28 @@
-.signUpContainer{
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
+@mixin Margin(){
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.modalContainer{
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
-
+    background: #ffffffb1;
     .signUpModal{
-        background-color: #f5f5f5;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background:#fff;
         border-radius: 10px;
-        width: 400px;
-        height: 400px;
+        width: 420px;
+        height: 450px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-
+        opacity: 1.6;
         .nameInputs{
             width: 100%;
             display: flex;
@@ -29,9 +35,8 @@
                 border: 1px solid #ccc;
                 border-radius: 5px;
                 padding: 0 10px;
-                margin-bottom: 10px;
-                margin-left: 5px;
-                margin-right: 5px;
+                margin-bottom: 12px;
+                @include Margin();
                 &:focus{
                     outline: none;
                 }
@@ -40,20 +45,23 @@
         }
         input{
             font-size:0.9em;
-            width: calc(100% - 31px);
+            width: calc(100% - 41px);
             height: 40px;
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 0 10px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             &:focus{
                 outline: none;
             }
+            @include Margin();
         }
         .dateInputs{
-            width: 100%;
+            width: calc(100% - 10px);
             display: flex;
             justify-content: center;
+            margin-bottom: 12px;
+            @include Margin();
             select{
                 width:calc((100% / 3) - 10px);
                 height: 40px;
@@ -82,5 +90,64 @@
                 color:white;
             }
         }
+        .closeButton{
+            display: flex;
+            width: 100%;
+            h1{
+                width: 98%;
+                margin: 10px 0px 12px 10px;
+                font-weight: 600;
+                font-size: 2.1em;
+                margin-right: auto;
+            }
+            img{
+                padding-right: 10px;
+            }
+        }
+        p{
+            width: calc(100% - 2%);
+            margin: 0;
+            margin-bottom:12px;
+            font-size: 01.1em;
+            font-weight: 300;
+            padding-left: 10px;
+        }
+        hr{
+            width: 100%;
+            background-color:black;
+            border: none;
+            border-top: 1px solid rgb(184, 184, 184);
+            margin: 0;
+            margin-bottom: 15px;
+        }
+        .genderInputs{
+            width:calc(100% - 10px);
+            display: flex;
+            align-items: center;
+            height:40px;
+            @include Margin();
+            .radioWrapper{
+                width: calc(100% / 3 - 10px);
+                margin-left: 5px;
+                margin-right: 5px;
+                height:100%;
+                display: flex;
+                align-items: center;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                input{
+                    width: 15px;
+                    height:15px;
+                    margin: 0;
+                    margin-left: auto;
+                }
+                label{
+                    font-size: 1em;
+                }
+            }
+        }
     }
+
 }
