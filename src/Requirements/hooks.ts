@@ -13,13 +13,15 @@ const useForm = () =>{
         date:1,
         month:1,
         year:2022,
+        gender:""
     });
     const [errors,setErrors] = useState({
         fname:"Enter Name",
         lname:"Enter Name",
         email:"Enter Email",
         pass:"Enter Password",
-        dob:"Enter Correct Date"
+        dob:"Enter Correct Date",
+        gender:"Select Gender"
     });
 
     useEffect(() =>{
@@ -28,7 +30,8 @@ const useForm = () =>{
             lname:checkName(values.lname),
             email:checkEmail(values.email),
             pass:checkPassword(values.pass),
-            dob:checkDate(values.date,values.month,values.year) ? "" : "Select Correct Date of Birth"
+            dob:checkDate(values.date,values.month,values.year) ? "" : "Select Correct Date of Birth",
+            gender:(values.gender === '') ? "Select Gender" : ""
         });
     },[values]);
 
