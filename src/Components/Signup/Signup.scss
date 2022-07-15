@@ -2,6 +2,11 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+@mixin Error(){
+    .error{
+        border-color:red;
+    }
+}
 
 .modalContainer{
     z-index: 1;
@@ -29,6 +34,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            @include Error();
             input{
                 width: calc(50% - 10px);
                 height: 40px;
@@ -43,6 +49,7 @@
                 font-size:0.9em;
             }
         }
+        @include Error();
         input{
             font-size:0.9em;
             width: calc(100% - 41px);
@@ -126,6 +133,7 @@
             align-items: center;
             height:40px;
             @include Margin();
+            @include Error();
             .radioWrapper{
                 width: calc(100% / 3 - 10px);
                 margin-left: 5px;
